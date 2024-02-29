@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url("{% static 'img/arkaplan.jpg' %}");}
+    </style>
+    
+</head>
+<body>
+    <!-- Hero image -->
+    {% block content %}
+      
+  
+    <div class="hero-image">
+       
+        {% include "includes/_navbar.html" %}
+        <!-- Hero Text -->
+        <div class="hero-text">
+            <h1>Films, Series and More</h1>
+        <h4>Watch wherever you want and cancel whenever you want</h4>
+        <p>Are you ready to watch? Enter your E-mail to create and access to your membership! </p>
+            <div class="input-group mb-3">
+                <input type="text" class="col-sm-8 col-12 form-control mt-3 " placeholder="E-posta adresi" aria-label="Recipient's username"
+                aria-describedby="button-addon2">
+                <a href="{% url 'register' %}" class="col-sm-4 col-12 btn btn-danger mt-3" type="button" id="button-addon2">Start  ></a>
+            </div>
+        </div>
+    </div>
+    <!-- Container-1 -->
+    <div class="container-fluid arkaplan mt-2">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <br>
+                <div class="text mt-5">
+                    <h1>You can watch in your TV.</h1>
+                    <h3>Smart TV, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and More</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <figure class="figure">
+                    <img src="{% static 'img/resim1.png' %}" class="figure-img img-fluid rounded" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container-2 -->
+    <div class="container-fluid arkaplan mt-2">
+        <div class="row">
+            <div class="col-lg-6 col-12 order-lg-1 order-2">
+                <figure class="figure">
+                    <img src="{% static 'img/resim2.jpg' %}" alt="" class="figure-img img-fluid rounded">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-12 order-lg-2 order-1">
+                <br>
+                <div class="text mt-5">
+                    <h1>Download contents for watching offline</h1>
+                    <h3>Save your contents and have something to watch everytime!</h3>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Container-3 -->
+    <div class="container-fluid arkaplan mt-2">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <br>
+                <div class="text mt-5">
+                    <h1>Watch wherever you want</h1>
+                    <h3>Watch series and films without paying extra money!</h3>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <figure class="figure">
+                    <img src="{% static 'img/resim3.png' %}" alt="" class="figure-img img-fluid rounded">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Container-4 -->
+    <div class="container-fluid arkaplan mt-2">
+        <div class="row">
+            <div class="col-lg-6 col-12 order-lg-1 order-2">
+                <figure class="figure">
+                    <img src="{% static 'img/resim4.png' %}" alt="" class="figure-img img-fluid rounded">
+                </figure>
+            </div>
+            <div class="col-lg-6 col-12 order-lg-2 order-1">
+                <br>
+                <div class="text mt-5">
+                    <h1>
+                        Create profiles for kids
+                    </h1>
+                    <h3>
+                        Send kids on adventures with their favorite characters in a space made just for
+                         them—free with your membership.
+                    </h3>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Accorddion -->
+    <div class="container-fluid arkaplan mt-2">
+        <div class="row w-100">
+            <div class="col-sm-9 col-12 m-auto mt-5">
+                <button class="accordion">What is Netflix?</button>
+                <div class="panel">
+                    <p>
+                        Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+
+                        You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+                    </p>
+                </div>
+
+                <button class="accordion mt-2">How much does netflix Cost?</button>
+                <div class="panel">
+                    <p>
+                        Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from 119.99 TL to 229.99 TL a month. No extra costs, no contracts.
+                    </p>
+                </div>
+
+                <button class="accordion mt-2">Where can i watch?</button>
+                <div class="panel">
+                    <p>
+                        Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                        You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                    </p>
+                </div>
+
+                <button class="accordion mt-2">How do i cancel?</button>
+                <div class="panel">
+                    <p>
+                        Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                    </p>
+                </div>
+                
+                <button class="accordion mt-2">What can i watch on Netflix?</button>
+                <div class="panel">
+                    <p>
+                        Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                    </p>
+                </div>
+
+                <p class="mt-5 text-light">Are you ready to watch? Enter your E-mail to create and access to your membership!</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="col-sm-8 col-12 form-control mt-3 " placeholder="E-mail address" aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                    <button class="col-sm-4 col-12 btn btn-danger mt-3" type="button" id="button-addon2">Start  ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+    <!-- Footer -->
+    <div class="container-fluid arkaplan mt-2">
+        <footer class="row">
+            <p class="mt-5">Do you have questions? Call 0500 000 00 00</p>
+
+            <div class="col-lg-3 col-6">
+                <ul class="navbar-nav">
+                    <li class="nav-item mb-2"><a href="" class="nav-link">SSS</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Investor Relations</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Terms of Use</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <ul class="navbar-nav">
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Help Center</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Jobs</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Privacy</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Speed Test</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <ul class="navbar-nav">
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Account</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Redeem Gift Cards</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Cookie Preferences</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Legal Notices</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <ul class="navbar-nav">
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Media Center</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Ways to Watch</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Coorperate Informations</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link">Only on Netflix</a></li>
+                </ul>
+            </div>
+        </footer>
+
+        <div class="row">
+            <div class="dropdown mb-4">
+                <a href="" class="btn text-white dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span><img src="{% static 'img/world.png' %}" alt=""></span>Turkish
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a href="" class="dropdown-item">Turkish</a></li>
+                <li><a href="" class="dropdown-item">English</a></li>
+            </ul>
+            </div>
+            <p class="p-footer">Netflix Türkiye (Can)</p>
+        </div>
+    </div>
+            
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
