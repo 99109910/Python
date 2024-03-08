@@ -1,2 +1,2 @@
 # Python
-Django,Tkinter and SQlite projects
+Django,Tkinter and SQLite projects
